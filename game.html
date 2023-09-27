@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="game-heading">
+        <a href="index.html">
+            <h1>
+                <img id="logo" src="assets/images/logo.png" alt="logo" /> Hangbot
+            </h1>
+        </a>
+    </header>
+
+    <section id="game-options">
+        <div id="timer-selector">
+            <h3>Mode:</h3>
+
+        </div>
+
+        <div id="control-buttons">
+            <button></button>
+            <button></button>
+        </div>
+
+    </section>
+
+    <section class="game-area">
+        <div id="hangbot-display-container">
+            <!-- hangbot image-->
+            <div id="hangbot-image">
+
+            </div>
+
+            <!-- chances left counter-->
+            <div id="chances-left">Chances left: <span id="life-counter">0</span>
+            </div>
+        </div>
+
+        <div id="game-elements">
+
+            <!-- timer display-->
+            <div id="timer"></div>
+
+            <!-- secret word display-->
+            <div id="secret-word"></div>
+
+            <!-- keyboard display-->
+            <div id="keyboard"></div>
+
+            <!-- hint display-->
+            <div id="hint"></div>
+        </div>
+    </section>
+
+    <div id="popup-message"></div>
+
+    <footer>
+        <p>&copy; 2023 Brindusa Manu. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+    
+</html>
+
