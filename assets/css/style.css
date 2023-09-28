@@ -38,3 +38,77 @@ body {
     height: 60px;
     vertical-align: middle;
 }
+
+/*-- welcome page and game area */
+
+.game-area {
+    width: 80%;
+    height: auto;
+    background-color: #f0f8ff;
+    border: 1px solid #4A4A4A;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 5px;
+    letter-spacing: 1px;
+    max-width: 1200px;
+}
+
+.game-area h2 {
+    padding: 20px 0 30px 0;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);   
+}
+
+#rules-container {
+    border: 1px solid #4a4a4a;
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    height: auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px;
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+#rules-container h3 {
+    padding: 20px 0 15px 0;
+    font-size: 25px ;
+    text-align: center;
+}
+
+#rules-container li {
+    list-style-type: none;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+#rules-container li i {
+    color: #0a356d;
+    font-size: 22px;
+}
+
+#rules-container p {
+    text-align: center;
+    font-size: 25px;
+}
+
+#play-btn {
+    font-size: 30px;
+    padding: 15px 20px;
+    background-color: #0a356d;
+    color: #f0f8ff;
+    border-radius: 250px;
+    margin: 25px 0 30px 0;
+    box-shadow: 1px 10px 5px silver;
+    cursor: pointer;
+}
+
+#play-btn:hover {
+    color: #0a356d;
+    background-color: #eceaea;
+    box-shadow: 0 1px 5px blue;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
