@@ -11,6 +11,9 @@ body {
     color: #4A4A4A;
     font-family: 'Titillium Web', sans-serif;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /*-- header */
@@ -52,6 +55,7 @@ body {
     box-shadow: 0 0 5px;
     letter-spacing: 1px;
     max-width: 1200px;
+    flex: 1;
 }
 
 .game-area h2 {
@@ -111,4 +115,12 @@ body {
     background-color: #eceaea;
     box-shadow: 0 1px 5px blue;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/*-- sticky footer*/
+
+footer {
+    align-self: center;
+    margin: 2rem;
+    font-size: 20px;
 }
