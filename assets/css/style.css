@@ -217,3 +217,13 @@ footer {
     display: inline-block;
     text-align: center;
 }
+
+/*-- secret word area */
+
+#secret-word {
+    font-size: 36px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    padding-top: 25px;
+}
