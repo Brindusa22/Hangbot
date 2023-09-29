@@ -188,6 +188,8 @@ footer {
 
 #game-elements {
     width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
 #hangbot-image {
@@ -246,6 +248,7 @@ footer {
     border: 1px solid #0a356d;
     box-sizing: border-box;
     box-shadow: 1px 10px 5px silver;
+    cursor: pointer;
 }
 
 .letter:hover {
@@ -255,3 +258,33 @@ footer {
     border: none;
 }
 
+/*-- hint button */
+
+#hint {
+    width: 90%;
+    padding-top: 10px;
+    align-self: flex-end;
+    display: flex;
+    margin-top: 20px;
+}
+
+#hint-button {
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    background-color: #eceaea;
+    color: #0a356d;
+    border-radius: 25px;
+    margin: 0 0 10px 10px;
+    box-shadow: 1px 1px 5px green;
+    cursor: pointer;
+}
+
+#hint-button:hover {
+    box-shadow: 1px 1px 5px blue;
+}
+
+#word-definition {
+    width: 80%;
+    padding: 10px 0;
+}
