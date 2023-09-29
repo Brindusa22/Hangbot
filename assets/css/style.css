@@ -172,3 +172,25 @@ footer {
     background-color: #eceaea;
     box-shadow: 0 1px 5px blue;
 }
+
+/*-- game area container */
+
+#game-container {
+    display: flex;
+    padding: 25px 40px;
+}
+
+#hangbot-display-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
+}
+
+#game-elements {
+    width: 50%;
+}
+
+#hangbot-image {
+    flex-grow: 2;
+    background-color:blue;
+}
