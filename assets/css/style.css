@@ -194,3 +194,26 @@ footer {
     flex-grow: 2;
     background-color:blue;
 }
+
+/*-- timer display */
+
+#timer-container {
+    font-size: 30px;
+    font-family: 'Orbitron', sans sans-serif;
+    border-radius: 25px;
+    background-color: #eceaea;
+    color: rgb(136, 13, 13);
+    box-shadow: 1px 1px 5px blue;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#timer-container .fa-hourglass-start{
+    padding: 0 5px 0 2px;
+}
+
+.countdown-digit {
+    display: inline-block;
+    text-align: center;
+}

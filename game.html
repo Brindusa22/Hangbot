@@ -9,7 +9,10 @@
     <!-- google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Titillium+Web&display=swap" rel="stylesheet">
+
+    <!-- font awesome-->
+    <script src="https://kit.fontawesome.com/29f3a45ff7.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Document</title>
@@ -57,9 +60,10 @@
 
             <!-- timer display-->
             <div id="timer-container">
-                <p>Timer: 
-                 <span id="countdown-timer">30</span>
-                </p>
+                <i class="fa-solid fa-hourglass-start"></i> 
+                <span class="countdown-digit">00</span>
+                <span class="countdown-colon">:</span>
+                <span class="countdown-digit" id="seconds">30</span>
             </div>
 
             <!-- secret word display-->
