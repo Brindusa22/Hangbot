@@ -119,10 +119,56 @@ body {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-/*-- sticky footer*/
+/*-- sticky footer */
 
 footer {
     align-self: center;
     margin: 2rem;
     font-size: 20px;
+}
+
+/*-- game page */
+
+#game-options {
+    background-color: #ffffff;
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#timer-selector {
+   padding: 0 0 2px 25px;
+   font-size: 18px;
+}
+
+.timer-btn {
+    margin: 0 0 0 15px;
+}
+
+#control-buttons {
+    padding-right: 25px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.game-btn {
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+    background-color: #0a356d;
+    color: #f0f8ff;
+    border-radius: 250px;
+    margin: 0 0 10px 10px;
+    box-shadow: 1px 10px 5px silver;
+    cursor: pointer;
+}
+
+.game-btn:hover {
+    color: #0a356d;
+    background-color: #eceaea;
+    box-shadow: 0 1px 5px blue;
 }
