@@ -199,7 +199,7 @@ footer {
 
 #timer-container {
     font-size: 30px;
-    font-family: 'Orbitron', sans sans-serif;
+    font-family: 'Orbitron', sans-serif;
     border-radius: 25px;
     background-color: #eceaea;
     color: rgb(136, 13, 13);
@@ -227,3 +227,31 @@ footer {
     margin-bottom: 35px;
     padding-top: 25px;
 }
+
+/*-- keyboard display */
+
+#keyboard {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.letter {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 5px;
+    background-color: #0a356d;
+    color: #eceaea;
+    font-size: 35px;
+    border: 1px solid #0a356d;
+    box-sizing: border-box;
+    box-shadow: 1px 10px 5px silver;
+}
+
+.letter:hover {
+    background-color: #eceaea;
+    color: #0a356d;
+    box-shadow: 0 1px 5px blue;
+    border: none;
+}
+
