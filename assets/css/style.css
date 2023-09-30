@@ -192,9 +192,9 @@ footer {
     flex-direction: column;
 }
 
-#hangbot-image {
-    flex-grow: 2;
-    background-color:blue;
+
+#hangbot {
+    width: 80%;
 }
 
 /*-- timer display */
