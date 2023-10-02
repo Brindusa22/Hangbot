@@ -51,8 +51,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 })
 
+/**
+ * displays the initial game with the underscores
+ * replacing the random word
+ */
 function runGame() {
-
+    let chosenWord = selectRandomWord();
+    let guessedLetters = [];
+    let chances = 7;
+    let gameStatus = '_'.repeat(chosenWord.word.length);
+    let word= document.getElementById('secret-word');
+    word.innerText = gameStatus;
+    console.log(chosenWord.word)
 }
 
 /**
@@ -66,10 +76,6 @@ function selectRandomWord() {
     return { word: randomWord, definition: wordList[randomWord] };
 
 }
-
-let chosenWord = selectRandomWord();
-console.log(chosenWord.word)
-console.log(chosenWord.definition);
 
 function checkInput() {
 
