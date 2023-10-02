@@ -56,15 +56,11 @@ function runGame() {
     console.log(chosenWord.word);
     console.log(chosenWord.definition);
 
-    function showHint() {
-
-        document.getElementById('word-definition').textContent = chosenWord.definition;
-    }
-
     let hintButton = document.getElementById('hint-button');
     hintButton.addEventListener('click', showHint);
-}
 
+}    
+  
 /**
  * Selects a random word and its definition from wordlist 
  * and return an object
@@ -76,6 +72,16 @@ function selectRandomWord() {
     return { word: randomWord, definition: wordList[randomWord] };
 
 }
+
+/**
+ *  displays the deffinition of the random word
+ *  
+ */
+function showHint() {
+
+    document.getElementById('word-definition').textContent = chosenWord.definition; 
+}
+ 
 
 function checkInput() {
 
