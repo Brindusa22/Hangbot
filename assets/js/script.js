@@ -35,11 +35,14 @@ let wordList = {
     };
 
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
 
     runGame();
 
 })
+
+let chosenWord = selectRandomWord();
+let guessedLetters = [];
+let chances = 7;
 
 /**
  * displays the initial game with the underscores
@@ -47,9 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 function runGame() {
 
-    let chosenWord = selectRandomWord();
-    let guessedLetters = [];
-    let chances = 7;
     let gameStatus = '_'.repeat(chosenWord.word.length);
     let word= document.getElementById('secret-word');
     word.innerText = gameStatus;
