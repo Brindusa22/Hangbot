@@ -1,20 +1,7 @@
 // add loading event and add event listeners to buttons
 // add object containing secret words and definitions
 
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
-
-    for (let button of buttons) {
-        button.addEventListener('click', function () {
-            if (this.getAttribute("data-type") === "hint") {
-                alert('you typed hint button');
-            } else if (this.getAttribute("data-type") === "letter") {
-                alert('you typed letter');
-            }
-        })
-    }
-
-    let wordList = {    
+let wordList = {    
             'Algorithm':'A step-by-step set of rules for solving a problem or performing a computation.',
             'Bandwidth':'The amount of data that can be transmitted or received per unit of time, usually measured in bits per second (bps).',
             'Compiler' :'A software tool that translates high-level programming code written in C, C++, or Java into machine code that a computer can execute.',
@@ -47,6 +34,19 @@ document.addEventListener("DOMContentLoaded", function() {
             'Download': 'The process of transferring data from a remote server to a local computer or device over a network or the internet.',
     };
 
+document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener('click', function () {
+            if (this.getAttribute("data-type") === "hint") {
+                alert('you typed hint button');
+            } else if (this.getAttribute("data-type") === "letter") {
+                alert('you typed letter');
+            }
+        })
+    }
+
     runGame();
 
 })
@@ -55,9 +55,21 @@ function runGame() {
 
 }
 
+/**
+ * Selects a random word and its definition from wordlist 
+ * and return an object
+ */
 function selectRandomWord() {
+    let secretWords = Object.keys(wordList);
+    let wordIndex = Math.floor(Math.random() * secretWords.length);
+    let randomWord = secretWords[wordIndex];
+    return { word: randomWord, definition: wordList[randomWord] };
 
 }
+
+let chosenWord = selectRandomWord();
+console.log(chosenWord.word)
+console.log(chosenWord.definition);
 
 function checkInput() {
 
