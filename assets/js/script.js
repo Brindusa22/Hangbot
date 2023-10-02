@@ -37,16 +37,6 @@ let wordList = {
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
-    for (let button of buttons) {
-        button.addEventListener('click', function () {
-            if (this.getAttribute("data-type") === "hint") {
-                alert('you typed hint button');
-            } else if (this.getAttribute("data-type") === "letter") {
-                alert('you typed letter');
-            }
-        })
-    }
-
     runGame();
 
 })
@@ -56,13 +46,23 @@ document.addEventListener("DOMContentLoaded", function() {
  * replacing the random word
  */
 function runGame() {
+
     let chosenWord = selectRandomWord();
     let guessedLetters = [];
     let chances = 7;
     let gameStatus = '_'.repeat(chosenWord.word.length);
     let word= document.getElementById('secret-word');
     word.innerText = gameStatus;
-    console.log(chosenWord.word)
+    console.log(chosenWord.word);
+    console.log(chosenWord.definition);
+
+    function showHint() {
+
+        document.getElementById('word-definition').textContent = chosenWord.definition;
+    }
+
+    let hintButton = document.getElementById('hint-button');
+    hintButton.addEventListener('click', showHint);
 }
 
 /**
@@ -82,10 +82,6 @@ function checkInput() {
 }
 
 function updateChancesLeft() {
-
-}
-
-function showHint() {
 
 }
 
