@@ -84,7 +84,10 @@ function showHint() {
     document.getElementById('word-definition').textContent = chosenWord.definition; 
 }
  
-
+/**
+ * Checks if the random word contains the letter that was clicked by the user
+ * and inserts the correct letters into an array
+ */
 function checkInput() {
 
     let buttons = document.getElementsByClassName('letter');
@@ -94,11 +97,14 @@ function checkInput() {
             let letter = button.textContent;
             if (chosenWord.word.toUpperCase().includes(letter)) {
                 console.log ('true');
+                guessedLetters.push(letter);
             } else {
                 console.log('false');
         }
     })
+    
     }
+    return guessedLetters;
 }
 
 
