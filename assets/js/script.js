@@ -53,11 +53,13 @@ function runGame() {
     let gameStatus = '_'.repeat(chosenWord.word.length);
     let word= document.getElementById('secret-word');
     word.innerText = gameStatus;
-    console.log(chosenWord.word);
+    console.log(chosenWord.word.toUpperCase());
     console.log(chosenWord.definition);
 
     let hintButton = document.getElementById('hint-button');
     hintButton.addEventListener('click', showHint);
+
+    checkInput();
 
 }    
   
@@ -85,7 +87,20 @@ function showHint() {
 
 function checkInput() {
 
+    let buttons = document.getElementsByClassName('letter');
+
+        for (let button of buttons) {
+            button.addEventListener('click', function() {
+            let letter = button.textContent;
+            if (chosenWord.word.toUpperCase().includes(letter)) {
+                console.log ('true');
+            } else {
+                console.log('false');
+        }
+    })
+    }
 }
+
 
 function updateChancesLeft() {
 
