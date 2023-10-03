@@ -106,6 +106,10 @@ function checkInput(letter) {
 
         updateChancesLeft(chances);
         chances--;
+        console.log(chances);
+        if (chances < 0) {
+            alert ('Sorry! You lost!');
+        } 
     }
 }
 
