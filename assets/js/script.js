@@ -90,19 +90,37 @@ function showHint() {
  * that were initially attributed to the random word
  */
 function checkInput(letter) {
+    let isCorrect = false;
 
     for (let i=0; i < word.length; i++ ) {
         if (chosenWord.word[i] === letter) {
             word[i] = letter;
+            isCorrect = true;
         }
     }
     console.log(word);
     document.getElementById('secret-word').textContent = word.join('');
+
+    // if the letter is incorrect decrease number of chances left
+    if (!isCorrect) {
+
+        updateChancesLeft(chances);
+        chances--;
+    }
 }
 
+/**
+ *  Decreases the number of robot icons displayed 
+ *  according to the nuber of chances left
+ */
+function updateChancesLeft(chances) {
+    let robots = document.getElementsByClassName('fa-robot');
 
-function updateChancesLeft() {
-
+    for (let i=0; i < robots.length; i++) {
+        if (i >= chances ) {
+            robots[i].style.display ="none";
+        }
+    }
 }
 
 function updateHangbotImg() {
