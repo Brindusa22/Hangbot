@@ -111,7 +111,14 @@ function checkInput(letter) {
             message= document.getElementById('popup-message');
             message.style.display= "block";
         } 
-    }
+    } else {
+        // message appears if the secret word no longer contains underscores 
+        let wordStatus= document.getElementById('secret-word').innerText;
+        if (!wordStatus.includes('_')) {
+            alert('You won!');
+        }
+        }
+    
 }
 
 /**
