@@ -108,7 +108,8 @@ function checkInput(letter) {
         chances--;
         console.log(chances);
         if (chances < 0) {
-            alert ('Sorry! You lost!');
+            message= document.getElementById('popup-message');
+            message.style.display= "block";
         } 
     }
 }
