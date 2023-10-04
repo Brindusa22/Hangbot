@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let chosenWord = selectRandomWord();
 let chances = 7;
+let hangbotStatus = 0;
 let word = document.getElementById('secret-word');
 word = Array(chosenWord.word.length).fill("_");
 
@@ -106,6 +107,8 @@ function checkInput(letter) {
 
         updateChancesLeft(chances);
         chances--;
+        updateHangbotImg();
+        hangbotStatus ++;  // if the letter is not correct hangbot-status countdown increases
         console.log(chances);
         if (chances < 0) {
             gameOverMessage();
@@ -166,7 +169,25 @@ function winningMessage() {
 
 }
 
+/**
+ * Updates the source path of the hangbot image to correspond to the current hangbot-status 
+ */
 function updateHangbotImg() {
+    let hangbotVersions = [
+        './assets/images/hangbot_1.png',
+        './assets/images/hangbot_2.png',
+        './assets/images/hangbot_3.png',
+        './assets/images/hangbot_4.png',
+        './assets/images/hangbot_5.png',
+        './assets/images/hangbot_6.png',
+        './assets/images/hangbot_7.png',
+        './assets/images/hangbot_8.png',
+    ];
+
+    let hangbotImage = document.getElementById('hangbot');
+    if (hangbotStatus < hangbotVersions.length) {
+            hangbotImage.src = hangbotVersions[hangbotStatus];
+        }
 
 }
 
