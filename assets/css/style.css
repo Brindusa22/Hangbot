@@ -315,9 +315,9 @@ footer {
 }
 
 #popup-message p {
-    font-size: 60px;
-    margin-top: 20%;
-    padding: 10%;
+    font-size: 3rem;
+    margin-top: 15%;
+    padding: 5%;
 }
 
 #play-again {
@@ -332,4 +332,10 @@ footer {
     cursor: pointer;
     position: relative;
     width: 40%;
+}
+
+#play-again:hover {
+    color: #0a356d;
+        background-color: #eceaea;
+        box-shadow: 0 1px 5px blue;
 }

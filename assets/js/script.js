@@ -108,16 +108,16 @@ function checkInput(letter) {
         chances--;
         console.log(chances);
         if (chances < 0) {
-            message= document.getElementById('popup-message');
-            message.style.display= "block";
-        } 
-    } else {
+            gameOverMessage();
+         
+        } else {
         // message appears if the secret word no longer contains underscores 
         let wordStatus= document.getElementById('secret-word').innerText;
         if (!wordStatus.includes('_')) {
             alert('You won!');
+            }
         }
-        }
+    }
     
 }
 
@@ -133,6 +133,20 @@ function updateChancesLeft(chances) {
             robots[i].style.display ="none";
         }
     }
+}
+
+/**
+ * Creates and styles the content of the popup message when the game was lost
+ */
+function gameOverMessage() {
+    message = document.getElementById('popup-message');
+    message.style.display = "block";
+    let correctAnswer = chosenWord.word;
+    let html = `<p><i class="fa-solid fa-face-frown" style="color: red;"></i>  Sorry! You Lost! <br> The correct answer was: 
+                <span style= "color:red; text-transform:uppercase;"> "${correctAnswer}"</span></p>
+                <button id="play-again" onclick="window.location.href='game.html'">Play Again</button>`
+    message.innerHTML = html;
+
 }
 
 function updateHangbotImg() {
