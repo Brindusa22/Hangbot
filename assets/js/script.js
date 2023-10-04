@@ -111,6 +111,9 @@ function checkInput(letter, button) {
         hangbotStatus ++;  // if the letter is not correct hangbot-status countdown increases
         console.log(chances);
         button.style.backgroundColor = "red";
+        button.style.color = "white"
+        button.style.boxShadow = "none";
+        button.disabled = true; // button already used can not be used twice
         if (chances < 0) {
             gameOverMessage();
          
@@ -118,6 +121,9 @@ function checkInput(letter, button) {
     } else {
         
         button.style.backgroundColor = "green";
+        button.disabled = true; // button can not be used twice
+        button.style.color = "white";
+        button.style.boxShadow = "none";
         let wordStatus= document.getElementById('secret-word').innerText;
         if (!wordStatus.includes('_')) {
             winningMessage();
