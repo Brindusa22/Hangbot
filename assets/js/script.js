@@ -110,15 +110,15 @@ function checkInput(letter) {
         if (chances < 0) {
             gameOverMessage();
          
-        } else {
-        // message appears if the secret word no longer contains underscores 
+        } 
+    } else {
+         
         let wordStatus= document.getElementById('secret-word').innerText;
         if (!wordStatus.includes('_')) {
-            alert('You won!');
+            winningMessage();
             }
-        }
     }
-    
+     
 }
 
 /**
@@ -146,6 +146,23 @@ function gameOverMessage() {
                 <span style= "color:red; text-transform:uppercase;"> "${correctAnswer}"</span></p>
                 <button id="play-again" onclick="window.location.href='game.html'">Play Again</button>`
     message.innerHTML = html;
+
+}
+
+/**
+ * Creates and styles the content of the message that pops up when the word is guessed
+ */
+function winningMessage() {
+    message = document.getElementById('popup-message');
+    message.style.display = "block";
+    let html = `<p><i class="fa-solid fa-face-smile" style="color: #4eaa3c;"></i>  Congratulations! <br> You are a Word Master!
+                <br> <i class="fa-solid fa-shield-halved" style="color: #2fb138;"></i>
+                <i class="fa-solid fa-shield-halved" style="color: #2fb138;"></i>
+                <i class="fa-solid fa-shield-halved" style="color: #2fb138;"></i> 
+                </p>
+                <button id="play-again" onclick="window.location.href='game.html'">Play Again</button>`;
+    message.innerHTML = html;
+    message.style.boxShadow =`0 1px 5px green`;
 
 }
 
