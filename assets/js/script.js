@@ -90,7 +90,7 @@ function showHint() {
  * inserts the correct letters into an array and then replaces the underscores
  * that were initially attributed to the random word
  */
-function checkInput(letter) {
+function checkInput(letter, button) {
     let isCorrect = false;
 
     for (let i=0; i < word.length; i++ ) {
@@ -110,12 +110,14 @@ function checkInput(letter) {
         updateHangbotImg();
         hangbotStatus ++;  // if the letter is not correct hangbot-status countdown increases
         console.log(chances);
+        button.style.backgroundColor = "red";
         if (chances < 0) {
             gameOverMessage();
          
         } 
     } else {
-         
+        
+        button.style.backgroundColor = "green";
         let wordStatus= document.getElementById('secret-word').innerText;
         if (!wordStatus.includes('_')) {
             winningMessage();
