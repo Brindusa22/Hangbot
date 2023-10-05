@@ -36,6 +36,16 @@ let wordList = {
 
 document.addEventListener("DOMContentLoaded", function() {
 
+    let hintButton = document.getElementById('hint-button');
+    hintButton.addEventListener('click', showHint);
+
+    //code for alt+key event listener taken from stackoverflow
+    window.addEventListener('keydown', function (event) {
+        if (event.altKey && event.key === 'h' || event.key === 'H') {
+            showHint();
+        }
+    })
+    
     runGame();
 
 })
@@ -53,15 +63,6 @@ function runGame() {
     console.log(chosenWord.word.toUpperCase());
     console.log(chosenWord.definition);
 
-    let hintButton = document.getElementById('hint-button');
-    hintButton.addEventListener('click', showHint);
-
-     //code for alt+key event listener taken from stackoverflow
-    window.addEventListener('keydown', function(event) {              
-        if (event.altKey && event.key === 'h' || event.key === 'H') { 
-            showHint();
-        }
-    })
 
 }    
   
