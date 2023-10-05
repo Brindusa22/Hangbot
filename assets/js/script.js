@@ -41,19 +41,15 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 let chosenWord = selectRandomWord();
-let chances = 7;
+let chances = 6;
 let hangbotStatus = 0;
 let word = document.getElementById('secret-word');
 word = Array(chosenWord.word.length).fill("_");
+document.getElementById('secret-word').textContent = word.join('');
 
 
-/**
- * displays the initial game with the underscores
- * replacing the random word
- */
 function runGame() {
 
-   
     console.log(chosenWord.word.toUpperCase());
     console.log(chosenWord.definition);
 
@@ -66,8 +62,6 @@ function runGame() {
             showHint();
         }
     })
-
-    checkInput();
 
 }    
   
@@ -189,7 +183,6 @@ function winningMessage() {
  */
 function updateHangbotImg() {
     let hangbotVersions = [
-        './assets/images/hangbot_1.png',
         './assets/images/hangbot_2.png',
         './assets/images/hangbot_3.png',
         './assets/images/hangbot_4.png',
