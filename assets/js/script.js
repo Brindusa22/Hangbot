@@ -60,6 +60,13 @@ function runGame() {
     let hintButton = document.getElementById('hint-button');
     hintButton.addEventListener('click', showHint);
 
+     //code for alt+key event listener taken from stackoverflow
+    window.addEventListener('keydown', function(event) {              
+        if (event.altKey && event.key === 'h' || event.key === 'H') { 
+            showHint();
+        }
+    })
+
     checkInput();
 
 }    
