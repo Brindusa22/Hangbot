@@ -217,8 +217,10 @@ function startTimedGame() {
             clearInterval(timer);
             alert("Time's up! Game over!");
         } else {
-            seconds = -- seconds;
-            document.getElementById('seconds').textContent =seconds;
+            
+            // adds a 0 digit to the seconds if the number is smaller then 10
+            document.getElementById('seconds').textContent = `${seconds < 10 ? '0':''} ${seconds}`; 
+            seconds--;
         }
     }
 }
@@ -234,13 +236,11 @@ function timerOn () {
     let timerOn = document.getElementById('timed-game');
     return timerOn.checked;
 }
-console.log(timerOn());
 
 function gameMode() {
     let timerContainer =document.getElementById('timer-container');
     if (timerOn()) {
         timerContainer.style.visibility = 'visible';
-        seconds = 45;
         startTimedGame();
     } else {
         timerContainer.style.visibility = 'hidden';
