@@ -226,7 +226,7 @@ function startTimedGame() {
         }
 
         if (gameWon) {
-            winningMessage();
+            stopTimerMessage();
             clearInterval(timer);
         }
         
@@ -271,3 +271,20 @@ function timeIsUpMessage() {
     message.innerHTML = html;
 }
 
+/**
+ * Winning message that pops up if the game is won before the time is up
+ */
+function stopTimerMessage() {
+    message = document.getElementById('popup-message');
+    message.style.display = "block";
+    let html = `<p><i class="fa-solid fa-clock" style="color: green;"></i>  
+                Congratulations! <br> That's fast! You still had: 
+                <span style= "color:green;">  ${seconds}</span> seconds left! <br>
+                <i class="fa-solid fa-award" style="color: green;"></i>
+                <i class="fa-solid fa-award" style="color: green;"></i>
+                <i class="fa-solid fa-award" style="color: green;"></i> 
+                </p>
+                <button id="play-again" onclick="window.location.href='game.html'">Play Again</button>`;
+    message.innerHTML = html;
+    message.style.boxShadow = `0 1px 5px green`;
+} 
