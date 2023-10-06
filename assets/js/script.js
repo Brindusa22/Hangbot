@@ -215,7 +215,7 @@ function startTimedGame() {
     function runTimer () {
         if (seconds <= 0) {
             clearInterval(timer);
-            alert("Time's up! Game over!");
+            timeIsUpMessage();
         } else {
             
             // adds a 0 digit to the seconds if the number is smaller then 10
@@ -254,3 +254,15 @@ let unTimedGame = document.getElementById('untimed-game');
 unTimedGame.addEventListener('change', gameMode);
 timedGame.addEventListener('change', gameMode);
 
+/**
+ * Pops up when the time is up
+ */
+function timeIsUpMessage() {
+    message = document.getElementById('popup-message');
+    message.style.display = "block";
+    let correctAnswer = chosenWord.word;
+    let html = `<p><i class="fa-solid fa-clock fa-shake" style="color: red;"></i>  Sorry! Time's up! <br> The correct answer was: 
+                <span style= "color:red; text-transform:uppercase;"> "${correctAnswer}"</span></p>
+                <button id="play-again" onclick="window.location.href='game.html'">Play Again</button>`;
+    message.innerHTML = html;
+}
