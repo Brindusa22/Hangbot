@@ -228,6 +228,10 @@ function startTimedGame() {
         if (gameWon) {
             stopTimerMessage();
             clearInterval(timer);
+        } 
+        if (chances < 0) {
+            gameOverMessage();
+            clearInterval(timer);
         }
         
     }
