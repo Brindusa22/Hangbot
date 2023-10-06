@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     
     runGame();
-    startTimedGame();
+    //startTimedGame();
 })
 
 let chosenWord = selectRandomWord();
@@ -224,5 +224,33 @@ function startTimedGame() {
 }
 
 function endTimedGame() {
-
+     clearInterval(timer);
 }
+
+/**
+ * returns true if the timed-game button is checked
+ */
+function timerOn () {
+    let timerOn = document.getElementById('timed-game');
+    return timerOn.checked;
+}
+console.log(timerOn());
+
+function gameMode() {
+    let timerContainer =document.getElementById('timer-container');
+    if (timerOn()) {
+        timerContainer.style.visibility = 'visible';
+        seconds = 45;
+        startTimedGame();
+    } else {
+        timerContainer.style.visibility = 'hidden';
+        endTimedGame();
+    }
+}
+
+// add event listeners to the game mode buttons
+let timedGame = document.getElementById('timed-game');
+let unTimedGame = document.getElementById('untimed-game');
+unTimedGame.addEventListener('change', gameMode);
+timedGame.addEventListener('change', gameMode);
+
