@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     
     runGame();
-
+    startTimedGame();
 })
 
 let chosenWord = selectRandomWord();
@@ -200,12 +200,27 @@ function updateHangbotImg() {
 
 }
 
+// set 45 seconds timer when the timer button is checked
+let seconds = 45;
+let timer;
+
+// code for timer is a combination from stackoverflow and w3Schools
+
+/**
+ * Sets the timer at 45 seconds and ends the game when time is up
+ */
 function startTimedGame() {
+    timer = setInterval(runTimer, 1000);
 
-}
-
-function runTimer() {
-
+    function runTimer () {
+        if (seconds <= 0) {
+            clearInterval(timer);
+            alert("Time's up! Game over!");
+        } else {
+            seconds = -- seconds;
+            document.getElementById('seconds').textContent =seconds;
+        }
+    }
 }
 
 function endTimedGame() {
