@@ -56,6 +56,7 @@ let hangbotStatus = 0;
 let word = document.getElementById('secret-word');
 word = Array(chosenWord.word.length).fill("_");
 document.getElementById('secret-word').textContent = word.join('');
+let gameWon = false;
 
 
 function runGame() {
@@ -129,6 +130,7 @@ function checkInput(letter, button) {
         let wordStatus= document.getElementById('secret-word').innerText;
         if (!wordStatus.includes('_')) {
             winningMessage();
+            gameWon = true;
             }
     }
      
@@ -222,11 +224,13 @@ function startTimedGame() {
             document.getElementById('seconds').textContent = `${seconds < 10 ? '0':''} ${seconds}`; 
             seconds--;
         }
-    }
-}
 
-function endTimedGame() {
-     clearInterval(timer);
+        if (gameWon) {
+            winningMessage();
+            clearInterval(timer);
+        }
+        
+    }
 }
 
 /**
@@ -244,7 +248,7 @@ function gameMode() {
         startTimedGame();
     } else {
         timerContainer.style.visibility = 'hidden';
-        endTimedGame();
+        clearInterval(timer);
     }
 }
 
@@ -266,3 +270,4 @@ function timeIsUpMessage() {
                 <button id="play-again" onclick="window.location.href='game.html'">Play Again</button>`;
     message.innerHTML = html;
 }
+
