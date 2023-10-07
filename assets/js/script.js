@@ -109,11 +109,18 @@ function selectRandomWord() {
 }
 
 /**
- *  displays the deffinition of the random word
+ *  displays the deffinition of the random word and updates button style when it is on
  *  
  */
 function showHint() {
-
+    let hintBtn = document.getElementById('hint-button');
+    hintBtn.style.boxShadow = 'none';
+    hintBtn.style.backgroundColor = '#eceaea';
+    hintBtn.style.border = '1px solid #9e3d';
+    let lightBulb =document.getElementById('lightbulb');
+    lightBulb.style.color = '#ff9500';
+    let desc = document.getElementById('description');
+    desc.style.visibility = 'hidden';
     document.getElementById('word-definition').textContent = chosenWord.definition; 
 }
  

@@ -279,23 +279,28 @@ footer {
 /*-- hint button */
 
 #hint {
-    width: 90%;
     padding-top: 10px;
-    align-self: flex-end;
     display: flex;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 #hint-button {
-    font-size: 15px;
-    letter-spacing: 1px;
+    font-size: 25px;
     padding: 10px 15px;
-    background-color: #eceaea;
-    color: #0a356d;
+    background-color: #0a356d;
     border-radius: 25px;
-    margin: 0 0 10px 10px;
+    margin-top: 10px;
+    margin-bottom: 1px;
     box-shadow: 1px 1px 5px green;
     cursor: pointer;
+}
+
+#hint-container {
+    display: block;
+}
+
+#hint-container p {
+    font-size: 12px;
 }
 
 #hint-button:hover {
@@ -303,9 +308,11 @@ footer {
 }
 
 #word-definition {
-    width: 80%;
-    padding: 10px 0;
+    width: 90%;
+    padding-top: 15px;
     color: #0a356d;
+    margin-left: 5px;
+    font-size: 18px;
 }
 
 /*-- chances left area */
