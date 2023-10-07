@@ -170,7 +170,7 @@ function checkInput(letter, button) {
  *  according to the nuber of chances left
  */
 function updateChancesLeft(chances) {
-    let robots = document.getElementsByClassName('fa-robot');
+    let robots = document.getElementsByClassName('lives');
 
     for (let i=0; i < robots.length; i++) {
         if (i >= chances ) {

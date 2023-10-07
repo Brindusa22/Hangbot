@@ -212,7 +212,6 @@ footer {
     flex-direction: column;
 }
 
-
 #hangbot {
     width: 80%;
 }
@@ -313,7 +312,26 @@ footer {
 
 #chances-left {
     color: #0a356d;
-    font-size: 20px;
+    font-size: 22px;
+    display: flex;
+    margin-left: 2rem;   
+}
+
+#chances-label {
+    float: left;
+    font-size: 25px;    
+}
+
+#life-counter {
+    clear: left;
+    float: left;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.lives {
+    padding: 0 3px 0 3px;
 }
 
 /*-- popup message */
