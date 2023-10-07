@@ -215,13 +215,13 @@ function winningMessage() {
  */
 function updateHangbotImg() {
     let hangbotVersions = [
-        './assets/images/hangbot_2.png',
-        './assets/images/hangbot_3.png',
-        './assets/images/hangbot_4.png',
-        './assets/images/hangbot_5.png',
-        './assets/images/hangbot_6.png',
-        './assets/images/hangbot_7.png',
-        './assets/images/hangbot_8.png',
+        './assets/images/hangbot_2.avif',
+        './assets/images/hangbot_3.avif',
+        './assets/images/hangbot_4.avif',
+        './assets/images/hangbot_5.avif',
+        './assets/images/hangbot_6.avif',
+        './assets/images/hangbot_7.avif',
+        './assets/images/hangbot_8.avif',
     ];
 
     let hangbotImage = document.getElementById('hangbot');
