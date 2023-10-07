@@ -236,31 +236,27 @@ function startTimedGame() {
     }
 }
 
-/**
- * returns true if the timed-game button is checked
- */
+// activates the timer mode when the on button is clicked 
 function timerOn () {
-    
-    
+    let timerContainer = document.getElementById('timer-container');
+    let btnOn = document.getElementById('timed-game');
+    let btnOff = document.getElementById('untimed-game');
+    btnOn.style.backgroundColor = '#0a356d';
+    btnOn.style.color = '#f0f8ff';
+    btnOff.style.backgroundColor = '#eceaea';
+    btnOff.style.color = '#4A4A4A';
+    timerContainer.style.visibility = 'visible';
+    seconds = 45;
+    startTimedGame();    
+} 
 
-function gameMode() {
-    let timerContainer =document.getElementById('timer-container');
-    if (timerOn()) {
-        timerContainer.style.visibility = 'visible';
-        seconds = 45;
-        startTimedGame();
-    } else {
-        timerContainer.style.visibility = 'hidden';
-        clearInterval(timer);
-        window.location.reload();
-    }
+// deactivates the timer and restarts the game when the off button is clicked
+function timerOff () {
+    let timerContainer = document.getElementById('timer-container');
+    timerContainer.style.visibility = 'hidden';
+    clearInterval(timer);
+    window.location.reload();
 }
-
-// add event listeners to the game mode buttons
-let timedGame = document.getElementById('timed-game');
-let unTimedGame = document.getElementById('untimed-game');
-unTimedGame.addEventListener('change', gameMode);
-timedGame.addEventListener('change', gameMode);
 
 /**
  * Pops up when the time is up
