@@ -240,9 +240,8 @@ function startTimedGame() {
  * returns true if the timed-game button is checked
  */
 function timerOn () {
-    let timerOn = document.getElementById('timed-game');
-    return timerOn.checked;
-}
+    
+    
 
 function gameMode() {
     let timerContainer =document.getElementById('timer-container');
