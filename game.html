@@ -47,7 +47,7 @@
     </section>
 
     <section class="game-area" id="game-container">
-        <div id="hangbot-display-container">
+        <div id="hangbot-display-container" class="container" >
             <!-- hangbot image-->
             <div id="hangbot-image">
                 <img id="hangbot" src="assets/images/hangbot_1.avif" alt="hangbot image">
@@ -68,18 +68,20 @@
             </div>
         </div>
 
-        <div id="game-elements">
+        <div id="game-elements" class="container">
 
             <!-- timer display-->
-            <div id="timer-container">
-                <i class="fa-solid fa-hourglass-start"></i> 
-                <span class="countdown-digit">00</span>
-                <span class="countdown-colon">:</span>
-                <span class="countdown-digit" id="seconds">45</span>
+            <div id="timer-word-container">
+                <div id="timer-container">
+                    <i class="fa-solid fa-hourglass-start"></i> 
+                    <span class="countdown-digit">00</span>
+                    <span class="countdown-colon">:</span>
+                    <span class="countdown-digit" id="seconds">45</span>
+                </div>
+                
+                <!-- secret word display-->
+                <div id="secret-word"></div>
             </div>
-
-            <!-- secret word display-->
-            <div id="secret-word"></div>
 
             <!-- keyboard display-->
             <div id="keyboard">

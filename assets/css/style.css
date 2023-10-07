@@ -59,6 +59,10 @@ body {
     max-width: 1200px;
 }
 
+.container {
+    flex: 1;
+}
+
 .game-area h2 {
     padding: 20px 0 30px 0;
     font-size: 1.8rem;
@@ -212,7 +216,7 @@ footer {
 }
 
 #hangbot {
-    width: 80%;
+    width: 30rem;
 }
 
 /*-- timer display */
@@ -220,7 +224,7 @@ footer {
 #timer-container {
     font-size: 30px;
     font-family: 'Orbitron', sans-serif;
-    width: 50%;
+    
     margin-left: auto;
     margin-right: auto;
     visibility: hidden; 
@@ -382,4 +386,103 @@ footer {
     color: #0a356d;
         background-color: #eceaea;
         box-shadow: 0 1px 5px blue;
+}
+
+/*----- Media Queries  */
+
+@media (max-width: 1413px) {
+    #keyboard {
+        width: 100%;
+    }
+
+    #chances-left {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1050px) {
+    #hangbot-display-container {
+        width: 20%;
+    }
+
+    #hangbot-image {
+        overflow: hidden;
+    }
+
+    #chances-left {
+        display: block;
+    }
+
+    #life-counter {
+        padding: 1rem 0 0 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    #hangbot {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 780px) {
+    #game-container {
+        display: block;  
+        padding: 25px 20px;
+    }
+
+    #hangbot-display-container {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #chances-label {
+        font-size: 18px;
+    }
+
+    #chances-left {
+        font-size: 16px;
+        max-width: 30%;
+    }
+
+    #game-elements {
+        width: 100%;
+    }
+
+    #hangbot-image {
+      max-width: 70%;
+    }
+
+    #timer-word-container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #secret-word {
+        padding: 0;
+    }
+}
+
+@media (max-width: 720px) {
+    #chances-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #life-counter {
+        flex-direction: column;
+    }
+    
+    .lives {
+        padding: 15px 3px 0 3px ;
+    }
+
+}
+
+@media (max-width: 540px) {
+    #game-options {
+        width: 50%;
+        justify-content: center;
+    }
 }
