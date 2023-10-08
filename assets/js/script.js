@@ -206,7 +206,7 @@ function gameOverMessage() {
 function winningMessage() {
     message = document.getElementById('popup-message');
     message.style.display = "block";
-    let html = `<p><i class="fa-solid fa-face-smile" style="color: #4eaa3c;"></i>  Congratulations! <br> You are a Word Master!
+    let html = `<p><i class="fa-solid fa-face-smile" style="color: #4eaa3c;"></i>  Congratulations! <br> You are a Tech-Word Master!
                 <br> <i class="fa-solid fa-shield-halved" style="color: #2fb138;"></i>
                 <i class="fa-solid fa-shield-halved" style="color: #2fb138;"></i>
                 <i class="fa-solid fa-shield-halved" style="color: #2fb138;"></i> 

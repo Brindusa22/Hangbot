@@ -352,8 +352,8 @@ footer {
 
 #popup-message {  
     position: absolute;
-    width: 80%;
-    height: 75%;
+    width: 90%;
+    height: 90%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -370,10 +370,11 @@ footer {
     font-size: 3rem;
     margin-top: 15%;
     padding: 5%;
+    font-weight: bold;
 }
 
 #play-again {
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 1px;
     padding: 15px 20px;
     background-color: #0a356d;
@@ -567,5 +568,9 @@ footer {
 
     #game-container {
         padding: 15px 10px;
+    }
+
+    #popup-message p {
+        font-size: 2rem;
     }
 }
