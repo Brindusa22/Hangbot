@@ -447,7 +447,6 @@ footer {
 
     #life-counter {
         padding-top: 5px;
-        height: 80%;
     }
 
     #chances-left {
@@ -512,6 +511,7 @@ footer {
 
     #life-counter {
         flex-direction: column;
+        max-width: 780px
     }
     
     .lives {
