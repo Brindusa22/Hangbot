@@ -506,7 +506,6 @@ footer {
     #chances-left {
         display: flex;
         flex-direction: column;
-        justify-content: center;
     }
 
     #life-counter {
@@ -523,6 +522,50 @@ footer {
 @media (max-width: 540px) {
     #game-options {
         width: 50%;
+        justify-content: space-evenly;
+    }
+    
+    #control-buttons {
+        padding: 0; 
+    }
+
+    #time-selector {
+        padding: 0;
+    }
+
+    #timer-container {
         justify-content: center;
+    }
+}
+
+@media (max-width: 474px) {
+    #chances-left {
+        padding-top: 0;
+        justify-content: flex-start;
+        height: 300px;
+    }
+
+    #life-counter {
+       padding-top: 30px;
+    }
+
+    .game-btn {
+        margin-left: 0;
+    }
+
+    #timer-selector {
+        padding: 0;
+    }
+
+    #timer-container {
+        justify-content: flex-end;
+    }
+
+    .game-area {
+        width: 90%;
+    }
+
+    #game-container {
+        padding: 15px 10px;
     }
 }
