@@ -62,7 +62,7 @@ let wordList = {
             'installer': 'When you download new software to your computer, you will often need to run this program first.',
             'metadata': 'Data that describes other data. Digital files often include this to provide information about the file and its contents.',
             'operator': 'A symbol within a mathematical expression that defines a specific operation.',
-    }
+    };
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -74,10 +74,9 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event.altKey && event.key === 'h' || event.key === 'H') {
             showHint();
         }
-    })
+    });
     
-    runGame();
-})
+});
 
 let chosenWord = selectRandomWord();
 let chances = 6;
@@ -150,7 +149,7 @@ function checkInput(letter, button) {
         hangbotStatus ++;  // if the letter is not correct hangbot-status countdown increases
         console.log(chances);
         button.style.backgroundColor = "red";
-        button.style.color = "white"
+        button.style.color = "white";
         button.style.boxShadow = "none";
         button.disabled = true; // button already used can not be used twice
         if (chances < 0) {
@@ -195,7 +194,7 @@ function gameOverMessage() {
     let correctAnswer = chosenWord.word;
     let html = `<p><i class="fa-solid fa-face-frown" style="color: red;"></i>  Sorry! You Lost! <br> The correct answer was: 
                 <span style= "color:red; text-transform:uppercase;"> "${correctAnswer}"</span></p>
-                <button id="play-again" onclick="window.location.href='game.html'">Play Again</button>`
+                <button id="play-again" onclick="window.location.href='game.html'">Play Again</button>`;
     message.innerHTML = html;
 
 }
