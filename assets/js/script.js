@@ -1,4 +1,4 @@
-// add loading event and add event listeners to buttons
+
 // add object containing secret words and definitions
 
 let wordList = {    
@@ -85,15 +85,7 @@ let word = document.getElementById('secret-word');
 word = Array(chosenWord.word.length).fill("_");
 document.getElementById('secret-word').textContent = word.join('');
 let gameWon = false;
-
-
-function runGame() {
-
-    console.log(chosenWord.word.toUpperCase());
-    console.log(chosenWord.definition);
-
-
-}    
+  
   
 /**
  * Selects a random word and its definition from wordlist 
