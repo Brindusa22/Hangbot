@@ -59,6 +59,10 @@ body {
     max-width: 1200px;
 }
 
+#welcome-area {
+    margin-top: 25px;
+}
+
 .container {
     flex: 1;
 }
@@ -91,7 +95,7 @@ body {
 #rules-container li {
     list-style-type: none;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 #rules-container li i {
@@ -126,7 +130,7 @@ body {
 
 footer {
     align-self: center;
-    margin: 2rem;
+    margin: 2.5rem;
     font-size: 20px;
 }
 
