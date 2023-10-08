@@ -66,7 +66,7 @@ let wordList = {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    let hintButton = document.getElementById('hint-button');
+    let hintButton = document.getElementById('hint-btn');
     hintButton.addEventListener('click', showHint);
 
     //code for alt+key event listener taken from stackoverflow
@@ -113,7 +113,7 @@ function selectRandomWord() {
  *  
  */
 function showHint() {
-    let hintBtn = document.getElementById('hint-button');
+    let hintBtn = document.getElementById('hint-btn');
     hintBtn.style.boxShadow = 'none';
     hintBtn.style.backgroundColor = '#eceaea';
     hintBtn.style.border = '1px solid #9e3d';

@@ -234,6 +234,10 @@ footer {
     visibility: hidden; 
 }
 
+#timer-selector h2{
+    font-size: 22px;
+}
+
 #timer-container .fa-hourglass-start{
     padding: 0 5px 0 2px;
 }
@@ -291,7 +295,7 @@ footer {
     margin-top: 15px;
 }
 
-#hint-button {
+#hint-btn {
     font-size: 25px;
     padding: 10px 15px;
     background-color: #0a356d;
@@ -310,7 +314,7 @@ footer {
     font-size: 12px;
 }
 
-#hint-button:hover {
+#hint-btn:hover {
     box-shadow: 1px 1px 5px blue;
 }
 
