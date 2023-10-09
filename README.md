@@ -1,7 +1,7 @@
 # Hangbot
 
 Welcome to [Hangbot](https://brindusa22.github.io/Hangbot/game.html)!
-This a hangman-inspired game with a focus on computer tech terms. The user has the task to guess a secret word, by selecting the letters from the virtual keyboard and has seven chances. In addition, the game features the following set of options: a timer, that offers the user the possibility to engage in a timed gameplay, with a 45 seconds countdown; and a hint button with the definition of the secret word. 
+This a hangman-inspired game with a focus on computer-tech terms. The user has the task to guess a secret word, by selecting the letters from the virtual keyboard and has seven chances. In addition, the game features the following set of options: a timer, that offers the user the possibility to engage in a timed gameplay, with a 45 seconds countdown; and a hint button with the definition of the secret word. 
 This game was designed to be both a game and an interactive quiz, for tech enthusiasts who want to challenge their knowledge of tech terms in a playful and engaging way. 
 
  ![Responsive design](assets/images/readme_images/responsive_design.png)
@@ -25,7 +25,7 @@ The logo was created with [Canva](https://www.canva.com/logos/). It has the same
 
 ### Images and Icons
 
-- The _hangbot_ image was taken from [Vecteezy](https://www.vecteezy.com/vector-art/10361091-simple-vector-drawing-in-doodle-style-robot-cute-robot-hand-drawn-with-lines-funny-illustration-for-kids) and mofified with _Paint_ to meet the design requirements of the game. 
+- The _hangbot_ image was taken from [Vecteezy](https://www.vecteezy.com/vector-art/10361091-simple-vector-drawing-in-doodle-style-robot-cute-robot-hand-drawn-with-lines-funny-illustration-for-kids) and modified with _Paint_ to meet the design requirements of the game. 
  
   ![Hangbot image](assets/images/readme_images/hangbot_updated.jpg)
   
@@ -103,6 +103,7 @@ The logo was created with [Canva](https://www.canva.com/logos/). It has the same
  ### Future Features
 
   - Add levels and increase the difficulty of the words gradually.
+  - Add sounds and animations.
 
 ## Testing
 
@@ -192,5 +193,3 @@ The live link can be found here: <https://brindusa22.github.io/Hangbot/>
 #### Content
 
  - The words and their definition are taken from the [TechTerms.com The Computer Dictionary](https://techterms.com/).
-        
-
