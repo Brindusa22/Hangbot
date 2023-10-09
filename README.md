@@ -1,8 +1,8 @@
 # Hangbot
 
 Welcome to [Hangbot](https://brindusa22.github.io/Hangbot/game.html)!
-This a hangman-inspired game with a focus on computer tech terms. The user has the task to guess a secret word, by selecting the letters from the virtual keyboard and has seven chances. In addition the game features some useful options: a timer, to be able to play the game with a countdown and a hint button with the definition of the secret word. 
-It was designed to be both a game and an interactive quiz, for tech enthusiasts who want to challenge their knowledge of tech terms in a playful and engaging way. 
+This a hangman-inspired game with a focus on computer tech terms. The user has the task to guess a secret word, by selecting the letters from the virtual keyboard and has seven chances. In addition, the game features the following set of options: a timer, that offers the user the possibility to engage in a timed gameplay, with a 45 seconds countdown; and a hint button with the definition of the secret word. 
+This game was designed to be both a game and an interactive quiz, for tech enthusiasts who want to challenge their knowledge of tech terms in a playful and engaging way. 
 
  ![Responsive design](assets/images/readme_images/responsive_design.png)
 
@@ -20,6 +20,7 @@ It was designed to be both a game and an interactive quiz, for tech enthusiasts 
 ### Logo
 
 The logo was created with [Canva](https://www.canva.com/logos/). It has the same main colors of the game and its round shape is meant to resemble the virtual keyboard buttons and the hint button. It was also used as a _favicon_. When clicked it takes the user to the rules page.
+
 ![Logo](assets/images/readme_images/logo.png)
 
 ### Images and Icons
@@ -42,7 +43,7 @@ The logo was created with [Canva](https://www.canva.com/logos/). It has the same
 
 - The game page
   
-    To maintain a consistency, the game page has the same structure as the welcome page.
+    To maintain consistency, the game page has the same structure as the welcome page.
   
     - Logo and heading
   
@@ -51,15 +52,15 @@ The logo was created with [Canva](https://www.canva.com/logos/). It has the same
 
     - Control buttons
 
-         - Above the game window, the user can easily find all the control buttons of the game: on the right side, the restart button and the rules button, which takes him again to the rules page, and on the left side the timer switch, which gives the user the possibility to activate and deactivate a 45 second timer. The buttons have the same style including the same hover effect.
+         - Above the game window, the user can easily find all the control buttons of the game: on the right side, the restart button and the rules button, which leads to the rules page, and on the left side the timer switch, which gives the user the possibility to activate and deactivate a 45 second timer. The buttons have the same style including the same hover effect.
   
         ![Control buttons](assets/images/readme_images/control_buttons.png)
 
     - Game window 
 
-      - As mentioned above, the game window maintains the same visual aspect, in terms of styling, as the welcome / rules area. Its structure is divided into two main areas.
-      -  On the right side, the input area where the user can choose one letter at a time from a virtual keyboard, or press the hint button (which can also be triggered using the Alt+h keys on the computer keyboard) to get the deffinition of the secret word. The letters can only be clicked once. After a letter has been clicked, its button turns green or red, depending if the guess was correct or not, and the button is then disabled, alowing the user to concentrate only on the still possible options. 
-      - On the left side, the output area is displaying a hangbot image that is updated with every letter- click of the user. At the bottom of this output area there is a chances left counter, consisting of seven small robot icons. Each time a mistake is made, a robot icon is subtracted from the chances-left counter.
+      - As mentioned above, the game window maintains the same visual aspect, in terms of styling, as the welcome / rules area. Its structure is divided into two main areas:
+        -  On the right side, the input area where the user can choose one letter at a time from a virtual keyboard, or press the hint button (which can also be triggered using the Alt+h keys on the computer keyboard) to get the deffinition of the secret word. The letters can only be clicked once. After a letter has been clicked, its button turns green or red, depending if the guess was correct or not, and the button is then disabled, alowing the user to concentrate only on the still possible options. 
+        - On the left side, the output area is displaying a hangbot image that is updated each time a wrong letter is clicked. At the bottom of the hangbot image, there is a chances-left counter, consisting of seven small robot icons. Each time a mistake is made, a robot icon is subtracted from the counter, simultaneously with the hangbot image being updated.
        
         ![Game window](assets/images/readme_images/game_stage.png)
     
@@ -74,17 +75,98 @@ The logo was created with [Canva](https://www.canva.com/logos/). It has the same
          
         ![Timer](assets/images/readme_images/timer_display.png)
 
-        - When the time is up and the user has not guessed the word, the game is over and a _Time's up_ notification pops up.
+        - If the time is up and the user has not guessed the word, the game is over and a _Time's up_ notification pops up.
         - If the secret word was guessed in 45 seconds and again with no more than six mistakes, a congratulatory message appears, letting the user know how much time left he had.
          
             ![Timer feedback](assets/images/readme_images/timer-message0.jpg)
         
       - Hint Button
 
-        - The hint button provides a definition of the secret word from the TechTerm.com dictionary. It is located directly under the virtual keyboard and is suggestively represented by a lightbulb that is _lightened_ when it is turned on.. It can be used at any time and can be also activated with the Alt + h keys from the computer keyboard.
+      - The hint button provides a definition of the secret word from the [TechTerms.com](https://techterms.com/) dictionary. It is located directly under the virtual keyboard and is suggestively represented by a lightbulb that is _lightened_ when turned on (clicked). It can be used at any time and can be also activated with the Alt + h keys from the computer keyboard.
          
         ![Hint button](assets/images/readme_images/hint_btn.png) 
         
  ### Future Features
 
   - Add levels and increase the difficulty of the words gradually.
+
+## Testing
+
+The game was tested on Chrome and Safari browsers, on laptop, tablet and mobile phone.
+
+The media queries created allow the game to fit nicely on all screen sizes and to maintain its aspect-ratio. The design of the game adapts accordingly.
+
+### Lighthouse
+
+The reports generated by _Lighthouse_ are the following:
+
+![Lighthouse](assets/images/readme_images/lighthouse.jpg)
+
+### Validator Testing
+
+  - HTML:
+    
+    Minor errors were found with the official W3C Validator, such as spacing and punctuation, which were fixed. The validator returned then no error:
+    ![Html Validator](assets/images/readme_images/validator_html.png) 
+    
+  - CSS :
+
+    No errors were found when passing the code through the official (Jigsaw) validator:
+    ![CSS Validator](assets/images/readme_images/validator_css.png)
+
+  - JavaScript:
+ 
+    When passing the code through JSHint,the following warnings appear, all of them are of the same type:
+    
+    ![JSHint Validator](assets/images/readme_images/jshint.png)
+
+    The following metrics were returned:
+    
+    ![JSHint Metrics](assets/images/readme_images/jshint_metrics.png)
+
+### Unfixed Bugs
+
+There were no unfixed bugs left.
+
+## Deployment
+
+- The site was deployed to GitHub Pages. The steps to deploy are the following:
+        
+    - Go to the GitHub repository and navigate to the Settings tab;
+    - Go to the Pages section that can be found on the left side of the screen;
+    - From the Branch section drop-down menu select the Main Branch;
+    - Refresh the page and a detailed ribbon will indicate the succesful deployment and the link to the site.
+        
+The live link can be found here: <https://brindusa22.github.io/Hangbot/>
+
+## Credits
+
+### Media
+
+- The robot image was taken from [Vecteezy](https://www.vecteezy.com/vector-art/10361091-simple-vector-drawing-in-doodle-style-robot-cute-robot-hand-drawn-with-lines-funny-illustration-for-kids).
+- The logo was created with [Canva](https://www.canva.com/logos/).
+- The icons were taken from [FontAwesome](https://fontawesome.com/search).
+- The fonts were imported from [Google Fonts](https://fonts.google.com/).
+
+### Implementation 
+
+#### JavaScript
+
+ This is also mentioned in the comment above the respective code.
+
+- To implement the code for capturing _Alt+H_ on keydown for the Hint button I have read and used the suggestion found on _Stackoverflow_:
+    <https://stackoverflow.com/questions/52799263/how-to-capture-altn-on-keypress-in-javascript>
+
+- To implement the timer, I have done a research. I haven't used the exact code from there, but a combination of these sources:
+  
+<https://stackoverflow.com/questions/35299413/1-min-countdown-javascript>
+    
+<https://copyprogramming.com/howto/1-min-countdown-javascript>
+    
+<https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown>
+
+#### Content
+
+ - The words and their definition are taken from the [TechTerms.com The Computer Dictionary](https://techterms.com/).
+        
+
