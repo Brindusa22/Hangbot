@@ -15,18 +15,18 @@ This game was designed to be both a game and an interactive quiz, for tech enthu
  ## Layout and Design
 
  - The fonts I have used are _Titillium Web_  and _Orbitron_  which offer a very good readability. Their geometric shapes and sharp corners of the characters make them suitable for the robotic theme of the game, as they give a futuristic and mechanical touch.
- -  The colors I have used are _Alice blue_ -#F0F8FF for the background of the game area and a _Navy blue_ #0A356D for the buttons. All the buttons have shaddows and hover effects and the colors that I have applied to them are consistent throughout the entire project to create a clean but modern appearance.
+ -  The colors I have used are _Alice blue_ #F0F8FF for the background of the game area and a _Navy blue_ #0A356D for the buttons. All the buttons have shaddows and hover effects and the colors that I have applied to them are consistent throughout the entire project to create a clean, but modern appearance.
 
 ### Logo
 
-The logo was created with [Canva](https://www.canva.com/logos/). It has the same main colors of the game and its round shape is meant to resemble the virtual keyboard buttons and the hint button. It was also used as a _favicon_. When clicked it takes the user to the rules page.
+The logo was created with [Canva](https://www.canva.com/logos/). It has the same main colors of the game and its round shape is meant to resemble the virtual keyboard buttons and the hint button. It was also used as a _favicon_. When clicked it takes the user to the welcome / rules page.
 
 ![Logo](assets/images/readme_images/logo.png)
 
 ### Images and Icons
 
 - The _hangbot_ image was taken from [Vecteezy](https://www.vecteezy.com/vector-art/10361091-simple-vector-drawing-in-doodle-style-robot-cute-robot-hand-drawn-with-lines-funny-illustration-for-kids) and mofified with _Paint_ to meet the design requirements of the game. 
-- 
+ 
   ![Hangbot image](assets/images/readme_images/hangbot_updated.jpg)
   
 - The icons were taken from [FontAwesome](https://fontawesome.com/search) and their style was costumized according to the design of the game.
@@ -60,27 +60,32 @@ The logo was created with [Canva](https://www.canva.com/logos/). It has the same
     - Game window 
 
       - As mentioned above, the game window maintains the same visual aspect, in terms of styling, as the welcome / rules area. Its structure is divided into two main areas:
-        -  On the right side, the input area where the user can choose one letter at a time from a virtual keyboard, or press the hint button (which can also be triggered using the Alt+h keys on the computer keyboard) to get the deffinition of the secret word. The letters can only be clicked once. After a letter has been clicked, its button turns green or red, depending if the guess was correct or not, and the button is then disabled, alowing the user to concentrate only on the still possible options. 
-        - On the left side, the output area is displaying a hangbot image that is updated each time a wrong letter is clicked. At the bottom of the hangbot image, there is a chances-left counter, consisting of seven small robot icons. Each time a mistake is made, a robot icon is subtracted from the counter, simultaneously with the hangbot image being updated.
-       
+        -  On the right side, the input area where the user can choose one letter at a time from a virtual keyboard, or press the hint button (which can also be triggered using the Alt+h keys on the computer keyboard) to get the deffinition of the secret word. The letters can only be clicked once. After a letter has been clicked, its button turns green or red, depending if the guess was correct or not, and the button is then disabled, alowing the user to concentrate only on the still possible options.
+           
+        - On the left side, the output area is displaying a hangbot image that is updated each time a wrong letter is clicked.
+          
         ![Game window](assets/images/readme_images/game_stage.png)
+        
+        -  The number of attempts left is indicated by a _chances-left_ counter, consisting of seven small robot icons. Each time a mistake is made, a robot icon is subtracted from the counter, simultaneously with the hangbot image being updated. It is positioned at the bottom of the _hangbot_ image, for desktop screens, but its position changes for medium and smaller screens:
+       
+        ![Chances counter](assets/images/readme_images/chances_left.png) 
         
       - The secret word
 
-           - I have inserted a list of 60 words together with their definition in an _object_ at the begining of the JaveScript code. I have then created a function to randomly generate one of these words, together with its corresponding definition. To display the word without showing its letters, I have created an _Array_ which is filled with as many underscores as the length of the randomly chosen word. In this way, the number of underscores always corresponds to the number of letters of the secret word. It is positioned above the keyboard, to enhance the user's visibility of both elements.
+           - I have inserted a list of 60 words, together with their definition in an _object_ at the begining of the JaveScript code. I have then created a function to randomly generate one of these words, along with its corresponding definition. To display the word without showing its letters, I have created an _Array_ which is filled with as many underscores as the length of the randomly chosen word. In this way, the number of underscores always corresponds to the number of letters of the secret word. It is positioned above the keyboard, to enhance the user's visibility of both elements.
             
         ![Secret word](assets/images/readme_images/secret_word.png) 
          
       - Feedback and notifications
           
         - The user is allowed a total of six mistakes. At the seventh mistake, the game is over and a game-over message appears, revealing the correct answer. Underneath the message there is a big _Play Again_ button, encouraging the user to restart the game.
-        - If all the letters are correctly guessed and no more then six mistakes were made, the user wins and a congratulatory message pops up, again with a _Play_ button, offering the user the possibility to play again.
+        - If all the letters are correctly guessed and no more than six mistakes are made, the user wins and a congratulatory message pops up, again with a _Play_ button, offering the user the possibility to play again.
        
         ![Popup messages](assets/images/readme_images/feedback.png)
 
       - Timer
 
-        - If the user prefers to increase the level of diffculty, the timer button can be switchd on and a 45 seconds countdown will appear just above the secret word. If the timer is switched off during a timed game, the page will refresh and the game will resume with the timer deactivated.
+        - If the user prefers to increase the level of diffculty, the timer button can be switched on and a 45 seconds countdown will appear just above the secret word. If the timer is switched off during a timed game, the page will refresh and the game will resume with the timer deactivated.
          
         ![Timer](assets/images/readme_images/timer_display.png)
 
@@ -91,7 +96,7 @@ The logo was created with [Canva](https://www.canva.com/logos/). It has the same
         
       - Hint Button
 
-      - The hint button provides a definition of the secret word from the [TechTerms.com](https://techterms.com/) dictionary. It is located directly under the virtual keyboard and is suggestively represented by a lightbulb that is _lightened_ when turned on (clicked). It can be used at any time and can be also activated with the Alt + h keys from the computer keyboard.
+        - The hint button provides a definition of the secret word from the [TechTerms.com](https://techterms.com/) dictionary. It is located directly under the virtual keyboard and is suggestively represented by a lightbulb that is _lightened_ when turned on (clicked). It can be used at any time and can be also activated with the Alt + H key from the computer keyboard.
          
         ![Hint button](assets/images/readme_images/hint_btn.png) 
         
@@ -116,6 +121,7 @@ The reports generated by _Lighthouse_ are the following:
   - HTML:
     
     Minor errors were found with the official W3C Validator, such as spacing and punctuation, which were fixed. The validator returned then no error:
+    
     ![Html Validator](assets/images/readme_images/validator_html.png) 
     
   - CSS :
@@ -125,7 +131,7 @@ The reports generated by _Lighthouse_ are the following:
 
   - JavaScript:
  
-    When passing the code through JSHint,the following warnings appear, all of them are of the same type:
+    When passing the code through the official JSHint validator, the following warnings appear; all of them are of the same type:
     
     ![JSHint Validator](assets/images/readme_images/jshint.png)
 
@@ -175,7 +181,7 @@ The live link can be found here: <https://brindusa22.github.io/Hangbot/>
      
     <https://stackoverflow.com/questions/52799263/how-to-capture-altn-on-keypress-in-javascript>
 
-    - To implement the timer, I have done a research. I haven't used the exact code from there, but a combination of these sources:
+    - To implement the timer, I have done a research. I haven't used the exact code from these websites, but a combination of the three:
   
     <https://stackoverflow.com/questions/35299413/1-min-countdown-javascript>
     
